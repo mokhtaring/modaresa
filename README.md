@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+<h1 align="center">
+  📆 CALENDAR MODARESA
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img width="100" height="30" alt="Modaresa" src="https://modaresa.com/wp-content/uploads/2019/07/Total.png">
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##### Challenge of creating a simple calendar, with data manipulated in Local Storage (LocalStorage).
+<p align="center">
+  <img width="70" height="70" src="https://static.vecteezy.com/ti/vecteur-libre/p3/3292515-encercle-rendez-vous-calendrier-date-marqueur-vectoriel.jpg">
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h4 align="center"><a href="#">Click here to see the project.</a></h4>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Technology stack
+This project was developed with the following technology and its dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+    - typescript 
+    - react-scheduler (devexpress)
+    - cypress
+    - react-typed
+    - taiwindCSS
+    - moment
+    - docker
+    - react-hook-form
+    - react-toastify
+    - material-ui
+    - framer-motion
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ▶️ Running the project (Local)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Clone the repository using the following command or download
 
-### `npm run eject`
+```
+git clone 
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### To install dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+ yarn install / npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### To start the server
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+yarn start / npm start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ▶️ Running the project (Docker)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### With Docker properly installed and the Cloned repository, Run the command below:
+
+```
+docker-compose build --no-cache
+```
+
+```
+docker compose up
+```
+
+The server will be available on http://localhost:3000 in your browser
+
+## Unit testing (Component)
+The Unit testing (Component) is developed with cypress framework
+
+#### To start the Unit testing
+
+```
+ npx cypress open
+```
+
+---
+## Developer<br>
+<table>
+  <tr>
+    <td align="center">
+      <a href="">
+        <img src="" width="100" alt="Foto no GitHub"/><br>
+        <sub>
+          <b>Brahim MOKHTARI</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
