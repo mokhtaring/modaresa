@@ -52,17 +52,18 @@ const EventProvider = ({ children }: IChildren) => {
       const keys = Object.keys(changes.changed);
       const eventOld : IEvents[] = events.filter(({ id }) => id === keys[0]);
       const event0  = eventOld[0];
-      const startTime = changes.changed[keys[0]!].startDate ?? new Date(`${event0?.date} ${event0?.startDate}`) ;
-      const endTime = changes.changed[keys[0]!].endDate ?? new Date(`${event0?.date} ${event0?.endDate}`);
-      const startDate :string  = startTime.getHours() + ':' + (startTime.getMinutes()<10?'0':'') + startTime.getMinutes();
-      const endDate :string  = endTime.getHours() + ':' + (endTime.getMinutes()<10?'0':'') + endTime.getMinutes();
-      const date :string = endTime.toISOString().split('T')[0];
       const title = changes.changed[keys[0]!].title ?? event0?.title;
       const type = changes.changed[keys[0]!].type ?? event0?.type;
       const buyer = changes.changed[keys[0]!].buyer ?? event0?.buyer;
       const company = changes.changed[keys[0]!].company ?? event0?.company;
       const vendor = changes.changed[keys[0]!].vendor ?? event0?.vendor;
-
+      const startTime = changes.changed[keys[0]!].startDate ?? new Date(`${event0?.date} ${event0?.startDate}`) ;
+      const endTime = changes.changed[keys[0]!].endDate ?? new Date(`${event0?.date} ${event0?.endDate}`);
+      const startDate :string  = startTime.getHours() + ':' + (startTime.getMinutes()<10?'0':'') + startTime.getMinutes();
+      let endMinutes : string = (endTime.getMinutes()<10?'0':'') + endTime.getMinutes()
+      if(endTime.getHours()>17) endMinutes = '00'
+      const endDate :string  = endTime.getHours() + ':' + endMinutes;
+      const date :string = endTime.toISOString().split('T')[0];
       const newdate  = new Date(`${date} ${startDate}`)
       if(newdate < new Date()){
         toast.error(`You can't update this event on calendar, please choose a date in the future`)
