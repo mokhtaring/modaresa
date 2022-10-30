@@ -5,6 +5,7 @@ import { useEventsContext } from '../../context/EventsContext'
 import { useStateContext } from '../../context/StateContext'
 import { IEvents } from '../../core/types'
 import { EventTypes } from '../../mocks/dataResouces'
+import { toast } from 'react-toastify';
 
 interface IEventForm {
   event?: IEvents
@@ -17,12 +18,18 @@ export const EventForm = ({ event }: IEventForm) => {
   const { register, handleSubmit } = useForm<IEvents>()
 
   const onSubmit: SubmitHandler<IEvents> = (data) => {
-    if (event) {
-      updateEventStorage(data)
+    const date  = new Date(`${data.date} ${data.startDate}`)
+
+    if (date >= new Date()) {
+      if (event) {
+        updateEventStorage(data)
+      } else {
+        saveEventStorage(data)
+      }
+      setModal({ open: false })
     } else {
-      saveEventStorage(data)
+      toast.error(`You can't ${event ? 'update' : 'create' } this event on calendar, please choose a date in the future`)
     }
-    setModal({ open: false })
   }
   return (
     <div className="flex w-full justify-center bg-primary p-4">

@@ -63,6 +63,12 @@ const EventProvider = ({ children }: IChildren) => {
       const company = changes.changed[keys[0]!].company ?? event0?.company;
       const vendor = changes.changed[keys[0]!].vendor ?? event0?.vendor;
 
+      const newdate  = new Date(`${date} ${startDate}`)
+      if(newdate < new Date()){
+        toast.error(`You can't update this event on calendar, please choose a date in the future`)
+        return
+      }
+
       const event : IEvents ={
         id: event0?.id!,
         buyer: buyer,

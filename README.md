@@ -16,7 +16,7 @@
   <img width="70" height="70" src="https://static.vecteezy.com/ti/vecteur-libre/p3/3292515-encercle-rendez-vous-calendrier-date-marqueur-vectoriel.jpg">
 </p>
 
-<h4 align="center"><a href="#">Click here to see the project.</a></h4>
+<h4 align="center"><a href="https://github.com/mokhtaring/modaresa">Click here to see the project.</a></h4>
 
 
 ---
@@ -42,7 +42,7 @@ This project was developed with the following technology and its dependencies:
 #### Clone the repository using the following command or download
 
 ```
-git clone 
+git clone https://github.com/mokhtaring/modaresa.git
 ```
 
 #### To install dependencies
@@ -75,7 +75,7 @@ The server will be available on http://localhost:3000 in your browser
 ## Unit testing (Component)
 The Unit testing (Component) is developed with cypress framework
 
-#### To start the Unit testing
+#### To start the Unit testing, Run the command below:
 
 ```
  npx cypress open
@@ -86,8 +86,8 @@ The Unit testing (Component) is developed with cypress framework
 <table>
   <tr>
     <td align="center">
-      <a href="">
-        <img src="" width="100" alt="Foto no GitHub"/><br>
+      <a href="https://github.com/mokhtaring">
+        <img src="https://avatars.githubusercontent.com/u/108232201?v=4" width="100" alt="Foto no GitHub"/><br>
         <sub>
           <b>Brahim MOKHTARI</b>
         </sub>
